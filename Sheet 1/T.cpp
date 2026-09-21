@@ -1,21 +1,26 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
-int main()
-{
-	array<int, 3> values;
-	cin >> values[0] >> values[1] >> values[2];
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
 
-	array<int, 3> sortedValues = values;
-	sort(sortedValues.begin(), sortedValues.end());
+    int arr[3] = {a, b, c};
 
-	for (int value : sortedValues)
-		cout << value << '\n';
+    sort(arr, arr + 3);
 
-	cout << '\n';
+    // Sorted order
+    for (int i = 0; i < 3; i++) {
+        cout << arr[i] << endl;
+    }
 
-	for (int value : values)
-		cout << value << '\n';
+    cout << endl;
 
-	return 0;
+    // Original order
+    cout << a << endl;
+    cout << b << endl;
+    cout << c << endl;
+
+    return 0;
 }
